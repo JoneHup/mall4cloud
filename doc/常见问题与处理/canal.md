@@ -20,7 +20,7 @@ SHOW MASTER STATUS
 
 ```properties
 # 填写数据库地址
-canal.instance.master.address=192.168.1.46:3306
+canal.instance.master.address=123.60.75.135:3306
 # 填写mysql执行命令`SHOW MASTER STATUS`后的File内容
 canal.instance.master.journal.name=mysql-binlog.000001
 
@@ -44,7 +44,7 @@ canal.instance.dbPassword=canal
 
 ```properties
 # 填写RocketMQ地址
-rocketmq.namesrv.addr = 192.168.1.46:9876
+rocketmq.namesrv.addr = 115.159.81.111:9876
 ```
 
 
