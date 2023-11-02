@@ -20,7 +20,7 @@ SHOW MASTER STATUS
 
 ```properties
 # 填写数据库地址
-canal.instance.master.address=123.60.75.135:3306
+canal.instance.master.address=124.221.58.104:3306
 # 填写mysql执行命令`SHOW MASTER STATUS`后的File内容
 canal.instance.master.journal.name=mysql-binlog.000001
 

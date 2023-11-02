@@ -31,8 +31,8 @@ docker-compose up -d --build
  - mysql: 使用数据库连接工具进行连接， 端口3306 账号及密码 root/root
  - minio: http://115.159.81.111:9000 账号及密码 admin/admin123456
  - redis: 端口6379，没有密码
- - nacos: http://123.60.75.135:8848/nacos 账号及密码 nacos/nacos
- - kibana: http://123.60.75.135:5601
+ - nacos: http://124.221.58.104:8848/nacos 账号及密码 nacos/nacos
+ - kibana: http://124.221.58.104:5601
  - rocketmq-dashboard：http://115.159.81.111:8180
 
 
@@ -52,7 +52,7 @@ docker-compose up -d --build
 
 根据自己本地ip地址打开控制台，如下界面
 
-http://123.60.75.135:5601/app/dev_tools#/console
+http://124.221.58.104:5601/app/dev_tools#/console
 
 ![image-20210621114010421](../img/中间件安装/es新建索引-1.png)
 

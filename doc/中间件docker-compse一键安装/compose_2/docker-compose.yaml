@@ -4,7 +4,7 @@ services:
   mall4cloud-mysql:
     image: mysql:8.0
     container_name: mall4cloud-mysql
-    restart: 'no'
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=root
     ports:
@@ -18,7 +18,7 @@ services:
   mall4cloud-nacos:
     image: nacos/nacos-server:v2.2.0-slim
     container_name: mall4cloud-nacos
-    restart: 'no'
+    restart: always
     depends_on:
       - mall4cloud-mysql
     ports:
@@ -31,7 +31,7 @@ services:
       - MODE=standalone
       - PREFER_HOST_MODE=hostname
       - SPRING_DATASOURCE_PLATFORM=mysql
-      - MYSQL_SERVICE_HOST=123.60.75.135
+      - MYSQL_SERVICE_HOST=124.221.58.104
       - MYSQL_SERVICE_DB_NAME=mall4cloud_nacos
       - MYSQL_SERVICE_USER=root
       - MYSQL_SERVICE_PASSWORD=root
@@ -42,7 +42,7 @@ services:
   mall4cloud-seata:
     image: seataio/seata-server:1.6.1
     container_name: mall4cloud-seata
-    restart: 'no'
+    restart: always
     depends_on:
       - mall4cloud-mysql
       - mall4cloud-nacos
@@ -50,14 +50,14 @@ services:
       - 8091:8091
       - 7091:7091
     environment:
-      - SEATA_IP=123.60.75.135
+      - SEATA_IP=124.221.58.104
     volumes:
       - ./seata/application.yml:/seata-server/resources/application.yml
 
   mall4cloud-elasticsearch:
     image: elasticsearch:7.17.5
     container_name: mall4cloud-elasticsearch
-    restart: 'no'
+    restart: always
     ports:
       - 9200:9200
       - 9300:9300
@@ -72,7 +72,7 @@ services:
   mall4cloud-kibana:
     image: kibana:7.17.5
     container_name: mall4cloud-kibana
-    restart: 'no'
+    restart: always
     ports:
       - 5601:5601
     links:
@@ -84,7 +84,7 @@ services:
   mall4cloud-canal:
     image: canal/canal-server:v1.1.6
     container_name: mall4cloud-canal
-    restart: 'no'
+    restart: always
     ports:
       - 11111:11111
     volumes:

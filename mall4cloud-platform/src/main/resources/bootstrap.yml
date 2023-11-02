@@ -6,7 +6,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: ${NACOS_HOST:123.60.75.135}:${NACOS_PORT:8848}
+        server-addr: ${NACOS_HOST:124.221.58.104}:${NACOS_PORT:8848}
         username: nacos
         password: nacos
       config:
