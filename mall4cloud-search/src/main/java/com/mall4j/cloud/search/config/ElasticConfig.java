@@ -17,6 +17,6 @@ public class ElasticConfig {
     public RestHighLevelClient restHighLevelClient() {
         return new RestHighLevelClient(
                 RestClient.builder(
-                        new HttpHost("124.221.58.104", 9200, "http")));
+                        new HttpHost("124.70.153.166", 9200, "http")));
     }
 }

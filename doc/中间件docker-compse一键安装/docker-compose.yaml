@@ -6,7 +6,7 @@ services:
     container_name: mall4cloud-mysql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=mall4cloud@1024
     ports:
       - 3306:3306
     volumes:
@@ -54,7 +54,7 @@ services:
       - MYSQL_SERVICE_HOST=192.168.1.46
       - MYSQL_SERVICE_DB_NAME=mall4cloud_nacos
       - MYSQL_SERVICE_USER=root
-      - MYSQL_SERVICE_PASSWORD=root
+      - MYSQL_SERVICE_PASSWORD=mall4cloud@1024
     volumes:
       - ./nacos/logs:/home/nacos/logs
 

@@ -26,13 +26,11 @@ docker-compose up -d --build
 
 5.各个端访问路径及其密码
 
-请自行192.168.1.46替换为服务器ip
-
- - mysql: 使用数据库连接工具进行连接， 端口3306 账号及密码 root/root
- - minio: http://115.159.81.111:9000 账号及密码 admin/admin123456
- - redis: 端口6379，没有密码
+ - mysql: 使用数据库连接工具进行连接，http://124.221.58.104 端口3306 账号及密码 root/mall4cloud@1024
+ - minio: http://124.70.153.166:9000 账号及密码 admin/admin123456
+ - redis: http://124.70.153.166 端口6379，没有密码
  - nacos: http://124.221.58.104:8848/nacos 账号及密码 nacos/nacos
- - kibana: http://124.221.58.104:5601
+ - kibana: http://124.70.153.166:5601
  - rocketmq-dashboard：http://115.159.81.111:8180
 
 
@@ -52,7 +50,7 @@ docker-compose up -d --build
 
 根据自己本地ip地址打开控制台，如下界面
 
-http://124.221.58.104:5601/app/dev_tools#/console
+http://124.70.153.166:5601/app/dev_tools#/console
 
 ![image-20210621114010421](../img/中间件安装/es新建索引-1.png)
 

@@ -6,7 +6,7 @@ services:
     container_name: mall4cloud-mysql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=mall4cloud@1024
     ports:
       - 3306:3306
     volumes:
@@ -34,7 +34,7 @@ services:
       - MYSQL_SERVICE_HOST=124.221.58.104
       - MYSQL_SERVICE_DB_NAME=mall4cloud_nacos
       - MYSQL_SERVICE_USER=root
-      - MYSQL_SERVICE_PASSWORD=root
+      - MYSQL_SERVICE_PASSWORD=mall4cloud@1024
     volumes:
       - ./nacos/logs:/home/nacos/logs
 
@@ -53,32 +53,6 @@ services:
       - SEATA_IP=124.221.58.104
     volumes:
       - ./seata/application.yml:/seata-server/resources/application.yml
-
-  mall4cloud-elasticsearch:
-    image: elasticsearch:7.17.5
-    container_name: mall4cloud-elasticsearch
-    restart: always
-    ports:
-      - 9200:9200
-      - 9300:9300
-    environment:
-      - discovery.type=single-node
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
-    volumes:
-      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      - ./elasticsearch/data:/usr/share/elasticsearch/data
-      - ./elasticsearch/plugins:/usr/share/elasticsearch/plugins
-
-  mall4cloud-kibana:
-    image: kibana:7.17.5
-    container_name: mall4cloud-kibana
-    restart: always
-    ports:
-      - 5601:5601
-    links:
-      - mall4cloud-elasticsearch:elasticsearch
-    depends_on:
-      - mall4cloud-elasticsearch
 
 
   mall4cloud-canal:
