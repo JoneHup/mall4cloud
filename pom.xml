@@ -30,7 +30,7 @@
         <project.encoding>UTF-8</project.encoding>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-        <java.version>17</java.version>
+        <java.version>1.8</java.version>
 
         <!-- 核心依赖 -->
         <spring-boot.version>3.1.2</spring-boot.version>
@@ -56,6 +56,7 @@
         <fastjson.version>1.2.83</fastjson.version>
         <fastjson2.version>2.0.38</fastjson2.version>
         <spring-javaformat.version>0.0.22</spring-javaformat.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
     <dependencyManagement>
@@ -215,6 +216,11 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
                 <version>${springdoc-webflux.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
